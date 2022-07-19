@@ -1,0 +1,55 @@
+.App {
+    width: 100.24rem;
+    margin: auto;
+      
+    .workout-list {
+    
+        h2 {
+            color: $red;
+            font-size: 3rem;
+            margin: 3rem 0;
+        }
+
+        ol {
+          list-style: none;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin: 0;
+          padding: 0;
+    
+          li {
+            border: 1px solid $black;
+            border-radius: 1rem;
+            background-color: white;
+            flex-grow: 1;
+            padding: 0.5rem 1rem;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            width: 20rem;
+            
+            a, a:active, a:focus, a:visited {
+                color: $gray;
+                text-decoration: none;
+                font-weight: 100;
+            }
+
+            &:hover {
+              box-shadow: 1rem 1rem 3rem $gray;
+              color: $black;
+    
+                & > a {
+                    color: $red;
+                }
+            }
+          }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        padding: 0 1rem;
+        margin: 0;
+        width: 95%;
+    }
+}
